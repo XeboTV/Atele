@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augmentation</title>
+    <link rel="stylesheet" href="./style/augmentation.css">
+    <script src="./scripts/augmentation.js" defer></script>
+</head>
+<body>
+    <!--Vidéo de la terre qui tourne en boucle-->
+
+        <video autoplay muted loop class="earth">
+        <source src="./assets/video/earth.mp4" type="video/mp4">
+        </video>
+
+    <!--Code pour afficher les bulles d'informations-->
+
+        <div id="intro" class="intro">
+            <div class="txt">
+                Bienvenue dans l'espace communautaire !
+                <br>Regarde les idées de projets apparaître des 4 coins de la planète.
+            </div>
+            <div class="continue">
+                <button id="btnIntro">Continue</button>
+            </div>
+        </div>
+
+        <div id="project1" class="project project1 hidden">
+            <div class="txt">
+                Un stand de citron sur la place d'arme
+            </div>
+            <div class="arrow arrow1"></div>
+        </div>
+        <div id="project2" class=" project project2 hidden">
+            <div class="txt">Une ASBL pour venir caresser des chats</div>
+            <div class="arrow arrow2"></div>
+        </div>
+        <div id="displayProject" class="project project3 hidden">
+        </div>
+        <div id="project4" class="project project4 hidden">
+            <div class="txt">Donner des fleurs à toutes les maisons de Namur</div>
+            <div class="arrow arrow4"></div>
+        </div>
+         <div id="project5" class="project project5 hidden">
+            <div class="txt">Revenez voir pour plus de projets !</div>
+            <div class="arrow arrow5"></div>
+        </div>
+</body>
+</html>

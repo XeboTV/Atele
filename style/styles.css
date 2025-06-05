@@ -1,0 +1,500 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #E9DBC2;
+}
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: none;
+    -webkit-overflow-scrolling: touch; /* pour iOS */
+    width: 100vw;
+    height: 100vh;
+    scrollbar-width: none;
+}
+/*Code pour les paramètres généraux des images*/
+  .slide {
+      position: relative; /* Position pour le placement des images avec paralax*/
+      flex: 0 0 100vw; /* chaque image prend toute la largeur de l’écran */
+      height: 100vh;
+      background-size: 100% 100%;
+      background-position: center;
+      scroll-snap-align: start;
+      background-repeat: no-repeat;
+  }
+.paralax{
+    position: absolute;
+}
+/* Code pour les url des bg*/
+  .bg--ciel1{
+    background-image: url(../assets/img/bg/bg1.png);
+    z-index: 0;
+  }
+  .bg--ciel2{
+    background-image: url(../assets/img/bg/bg2.png);
+    z-index: 0;
+  }
+  .bg--ciel3{
+    background-image: url(../assets/img/bg/bg3.png);
+    z-index: 0;
+  }
+  .bg--ciel4{
+    background-image: url(../assets/img/bg/bg4.png);
+    z-index: 0;
+  }
+  .bg--ciel5{
+    background-image: url(../assets/img/bg/bg5.png);
+    z-index: 0;
+  }
+  .bg--ciel6{
+    background-image: url(../assets/img/bg/bg6.png);
+    z-index: 0;
+  }
+  .bg--ciel7{
+    background-image: url(../assets/img/bg/bg7.png);
+    z-index: 0;
+  }
+  .bg--ciel8{
+    background-image: url(../assets/img/bg/bg8.png);
+    z-index: 0;
+  }
+  .bg--ciel9{
+    background-image: url(../assets/img/bg/bg9.png);
+    z-index: 0;
+  }
+  .bg--ciel10{
+    background-image: url(../assets/img/bg/bg10.png);
+    z-index: 0;
+  }
+  .bg--ciel11{
+    background-image: url(../assets/img/bg/bg11.png);
+    z-index: 0;
+  }
+  .bg--ciel12{
+    background-image: url(../assets/img/bg/bg12.png);
+    z-index: 0;
+  }
+/*Code pour les placements des img*/
+  /*img case 1*/ 
+  .el__maison{
+      bottom: 12vh;
+      z-index: 2;
+  }
+  .el__chibi-maison{
+      position: absolute;
+      top: 64vh;
+      left: 40vw;
+      z-index: 10;
+      width: 110px;
+  }
+  .el__lampadaire{
+      top: 35vh;
+      left: 70vw;
+      z-index: 2;
+  }
+  .el__nuagesmall-1{
+    left: 40vw;
+    z-index: 1;
+  }
+  /* img case 2*/
+  .el__nuagesmedium-2{
+    left: 36vw;
+    z-index: 1;
+  }
+  .el__nuagesmall-2{
+    z-index: 1;
+    left: 23vw;
+    top:13vh;
+  }
+
+  /* img case 3*/
+  .el__chibi-bulle{
+    position: absolute;
+    top:61vh;
+    left: 49%;
+    z-index: 2;
+  }
+  .el__nuagesmedium-3{
+    left: 20vw;
+  }
+  /* img case 6*/
+    .el__grass{
+      bottom: 0vh;
+      z-index: 8;
+      width: 1920px;
+      height: 180px;
+    }
+    .el__grass-4{
+      right: 200vw;
+    }
+    .el__grass-5{ /*Placement pour l'herbe qui est devant la montagne*/
+      right: 100vw;
+    }
+    .el__moutains{ /* Code pour le placement des montagnes*/
+      bottom: 14vh;
+      right: 30vw;
+    }
+    /*Code montagne*/
+    .firstlayer{
+      z-index: 7;
+    }
+    .secondlayer{
+      z-index: 6;
+    }
+    .thirdlayer{
+      z-index: 5;
+    }
+    .fourlayer{
+      z-index: 4;
+    }
+    .fivelayer{
+      z-index: 3;
+    }
+    .el__nuagesbig{
+      z-index: 2;
+    }
+    .el__chibi-mountains{
+      z-index: 8;
+      top: 60vh;
+      right: 170vw;
+    }
+  /*img case 8*/
+    .el__chibi--entrée{
+      width: 110px;
+      top: 64vh;
+      left: 55vh;
+    }
+  /*img case 9*/
+    .el__chibi--milieu{
+     top: 59vh;
+      left: 27vw;
+    }
+  /*image case 10*/
+    .el__chibi--fin{
+      top: 60vh;
+      left: 15vw;
+    }
+
+/* Code dialogue*/
+  .slide {
+      position: relative; /* pour que la bulle en absolute soit positionnée par rapport à la slide */
+    }
+  /* Code pour cacher les bulles par défaults */
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  /* Les bulles */
+  .dialogue{
+    position: absolute;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+  .dialogue1 {
+    bottom: 40vh;
+    left: 43vw;   
+    max-width: 220px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue2 {
+    bottom: 40vh;
+    left: 43vw;
+    max-width: 340px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue3 {
+    bottom: 40vh;
+    left: 43vw;
+    max-width: 340px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue4 {
+    bottom: 43vh;
+    left: 47vw;
+    max-width: 200px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue5 {
+    bottom: 43vh;
+    left: 43vw;
+    max-width: 360px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue6 {
+    bottom: 43vh;
+    left: 42vw;
+    max-width: 400px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue7 {
+    bottom: 43vh;
+    left: 41vw;
+    max-width: 430px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+    .dialogue8 {
+    bottom: 43vh;
+    left: 41vw;
+    max-width: 430px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+   .dialogue9 {
+    bottom: 43vh;
+    left: 41vw;
+    max-width: 430px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue10 {
+    bottom: 43vh;
+    left: -75vw;
+    max-width: 440px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue11 {
+    bottom: 43vh;
+    left: -75vw;
+    max-width: 440px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue12 {
+    bottom: 43vh;
+    left: -75vw;
+    max-width: 440px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue13 {
+    bottom: 39vh;
+    left: 26vw;
+    max-width: 300px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue14 {
+    bottom: 43vh;
+    left: 26vw;
+    max-width: 400px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue15 {
+    bottom: 42vh;
+    left: 3vw;
+    max-width: 600px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue16 {
+    bottom: 42vh;
+    left: 3vw;
+    max-width: 600px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  .dialogue17{
+    bottom: 42vh;
+    left: 24vw;
+    max-width: 600px; /* Modifier ici pour la taille maximum de la bulle*/
+  }
+  
+  /* Code des flèches des bulles de dialogues */
+  .arrow{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent; /* Modifier les borders pour la taille de la flèches*/
+    border-right: 15px solid transparent;
+    border-top: 30px solid white;
+  }
+  .dialogue--arrow {
+    bottom: -20px;   /* en dessous de la bulle */
+    left: 8px;      /* ajuster horizontalement  */
+  }
+  .dialogue--arrow4 {
+    bottom: -20px;
+    left: 105px;
+  }
+  .dialogue--arrow5 {
+    bottom: -20px;
+    left: 180px;
+  }
+  .dialogue--arrow6 {
+    bottom: -20px;
+    left: 205px;
+  }
+  .dialogue--arrow7 {
+    bottom: -20px;
+    left: 220px;
+  }
+   .dialogue--arrow8 {
+    bottom: -20px;
+    left: 220px;
+  }
+   .dialogue--arrow9 {
+    bottom: -20px;
+    left: 220px;
+  }
+   .dialogue--arrow10 {
+    bottom: -20px;
+    left: 10px;
+  }
+     .dialogue--arrow11 {
+    bottom: -20px;
+    left: 10px;
+  }
+   .dialogue--arrow12 {
+    bottom: -20px;
+    left: 10px;
+  }
+  .dialogue--arrow13 {
+    bottom: -20px;
+    left: 70px;
+  }
+  .dialogue--arrow14 {
+    bottom: -20px;
+    left: 70px;
+  }
+  .dialogue--arrow15 {
+    bottom: -20px;
+    left: 300px;
+  }
+  .dialogue--arrow16 {
+    bottom: -20px;
+    left: 300px;
+  }
+  .dialogue--arrow17{
+    bottom: -20px;
+    left: 300px;
+  }
+  /*Style pour les texte */
+  .dialogue--title{
+    opacity: 1;
+    font-family: "sirenne-text-mvb", serif;
+    font-size: large;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .dialogue--text {
+    opacity: 1;
+    text-align: center;
+    margin-bottom: 20px ;
+    font-family: "sirenne-text-mvb", serif;
+    font-weight: 400;
+    font-style:normal;
+  }
+  .dialogue--bold{
+    font-weight: bold;
+  }
+  /* Conteneur boutons */
+  .dialogue--buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Style pour les boutons */
+  .dialogue--buttons button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+  }
+  
+  .dialogue--buttons button#btn--no {
+    background-color: #f44336;
+  }
+  
+  .dialogue--buttons button:hover {
+    filter: brightness(0.9);
+  }
+/*Le questionnaire*/
+  .questionnaire{
+    position: absolute;
+    top: 10vh;
+    left: -32vw;
+    padding: 12px 18px;
+    border-radius: 16px;
+    width: 500px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  #answers button {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #eee;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  #answers button:hover {
+    background-color: #ddd;
+  }
+    .el__chibi--questionnaire{
+      top: 55vh;
+      left: 60vw;
+    }
+    .el__chibi--end{
+      top: 60vh;
+      left: 60vw;
+    }
+  .img--questionnaire{ /*Permets au image de ne pas apparaitre sauf celle définit en display block*/
+    display: none;
+    top: 43vh;
+    left: 70vw;
+  }
+  .img--questionnaire.active{
+    display: block;
+  }
+/*L'augmentation*/
+  .el__chibi--augmentation{
+    width: 130px;
+    top: 60vh;
+    left: 37vw;
+  }
+  .projet{
+    position: absolute;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    top: 40vh;
+    left: 30vw;
+  }
+  input{
+  width: 100%;
+  max-width: 600px;
+  height: 60px;
+  font-size: 1.2rem;
+  padding: 15px;
+  border: 2px solid #888;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  }
+  .input--arrow{
+    bottom: -20px;
+    left: 180px;
+  }
+  .zoom--container { /*Bouger l'image grâce au container ici (utiliser les margins)*/
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .zoom-click{
+  position: absolute;
+  top: 320px; /* à modifier pour bouger l'image*/
+  left: 600px;
+  width: 400px;
+  max-width: 90%;
+  transition: transform 0.6s ease, top 0.6s ease, left 0.6s ease;
+  cursor: zoom-in;
+  z-index: 10;
+  }
+  .zoom-click:hover{
+    transform: scale(1.2)
+  }
+
+  .zoom-click.fullscreen--zoom {
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(10); /* agrandit et centre */
+    z-index: 9999;
+    cursor: default;
+    transition: transform 1.5s ease, top 0.6s ease, left 0.6s ease;
+    pointer-events: none; /* Évite d’autres clics pendant l’animation */
+  }

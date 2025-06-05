@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atélè</title>
+    <link rel="stylesheet" href="./style/styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ixh1aom.css">
+    <script src="./scripts/scripts.js" defer></script>
+</head>
+<body>
+    <div class="horizontal-scroll"> <!--Toute la page ce trouve dans cette div pour n'autoriser que le scroll horizontal-->
+
+        <!-- case 1-->
+        <div class="slide bg--ciel1">
+
+            <!-- Les images -->
+
+                <img class="el__grass paralax" src="./assets/img/elements/herbe.png" alt="herbe">
+
+                <img class="paralax el__maison parallax--slow" src="../Atele/assets/img/elements/Maison.png" alt="Maison">
+
+                <img class="el__chibi-maison" src="../Atele/assets/img/elements/chibi--maison.png" alt="Chibi">
+
+                <img class="paralax el__lampadaire parallax--slow" src="../Atele/assets/img/elements/lampadaire.png" alt="lampadaire">
+                
+                <img class="paralax el__nuagesmall-1 parallax--fast" src="./assets/img/elements/nuage--small.png" alt="small nuage">
+
+            <!-- Bulle de dialogue -->
+
+                <div id="dialogue1" class="dialogue1 dialogue hidden">
+                    <div class="dialogue--text"><span class="dialogue--title">Bienvenue !</span>
+                        <br>Tu as déjà visité notre site et tu veux accéder à la dernière partie</div>
+                    <div class="dialogue--buttons">
+                        <button id="btn--yes">Amène moi à la fin</button>
+                        <button id="btn--no">Non je veux visiter le site !</button>
+                    </div>
+                    <div class="dialogue--arrow arrow"></div> <!-- La petite flèche -->
+                </div>
+
+                <div id="dialogue2" class="dialogue dialogue2 hidden">
+                    <div class="dialogue--text">
+                        Je suis <span class="dialogue--bold">Jacques Servotte</span>, né le 26 septembre 1949 à Franière, dans la
+                        basse-Sambre, entre Charleroi et Namur. Je suis sculpteur, sérigraphe, céramiste, écrivain… autant de formes d’expression qui nourrissent mon travail artistique.
+                    </div>
+                    <div class="dialogue--buttons">
+                        <button id="btn--continue2" class="btn--yes">Continuer</button>
+                    </div>
+                    <div class="dialogue--arrow arrow"></div>
+                </div>
+
+                <div id="dialogue3" class="dialogue dialogue3 hidden">
+                    <div class="dialogue--text">
+                        Continue sur la page pour en apprendre plus sur moi !
+                    </div>
+                    <div class="dialogue--arrow arrow"></div>
+                </div>
+
+        </div>
+
+        <!-- case 2-->
+        <div class="slide bg--ciel2">
+            <!--Les images-->
+                <img class="el__grass paralax" src="./assets/img/elements/herbe.png" alt="herbe">
+
+                <img class="el__nuagesmedium-2 paralax parallax--medium" src="./assets/img/elements/nuage--medium.png" alt="nuage medium">
+
+                <img class="el__nuagesmall-2 paralax parallax--medium" src="./assets/img/elements/nuage--small.png" alt="nuages small">
+
+        </div>
+
+        <!-- case 3-->
+        <div class="slide bg--ciel3">
+            <!--Les images-->
+
+                <img class="el__grass paralax" src="./assets/img/elements/herbe.png" alt="herbe">
+
+                <img class="el__nuagesmall-3 paralax parallax--medium" src="./assets/img/elements/nuage--small.png" alt="nuage small">
+
+                <img class="el__nuagesmedium-3 paralax parallax--medium" src="./assets/img/elements/nuage--medium.png" alt="nuagge small">
+
+                <img class="el__chibi-bulle" src="./assets/img/elements/chibi--bulle.png" alt="Chibi bulle de question">
+
+            <!--Les dialogues-->
+
+                <div id="dialogue4" class="dialogue dialogue4 hidden">
+                        <div class="dialogue--text">
+                            Voici quelques informations sur l'histoire de mon œuvre !
+                        </div>
+                        <div class="dialogue--buttons">
+                            <button id="btn--continue4" class="btn--yes">Continuer</button>
+                        </div>
+                        <div class="dialogue--arrow4 arrow"></div>
+                </div>
+
+                <div id="dialogue5" class="dialogue dialogue5 hidden">
+                    <div class="dialogue--text">
+                        J’ai intitulé cette œuvre *Atèlé*, un mot qui désigne "celui qui s’attelle à une tâche longue et difficile".
+                        <br>Elle est née de cette idée : le travail exigeant, la persévérance, la volonté de se dépasser.
+                        <br>Aujourd’hui, elle se dresse à <span class="dialogue--bold">Namur</span>, au carrefour des rues des Carmes et des Croisiers.
+                    </div>
+                    <div class="dialogue--buttons">
+                        <button id="btn--continue5" class="btn--yes">Continuer</button>
+                    </div>
+                    <div class="dialogue--arrow5 arrow"></div>
+                </div>
+
+                <div>
+                    <div id="dialogue6" class="dialogue dialogue6 hidden">
+                        <div class="dialogue--text">
+                            C’est une sculpture imposante, en bronze, de plus de deux tonnes, mesurant 96 x 100 x 103 cm, avec une plaque de 40 x 12 cm, pour une hauteur totale de 136 cm.
+                            <br><br>Mais plus que son poids ou ses dimensions, c’est le message qu’elle porte qui m’importe.
+                            <br>Avec Atèlé, je veux lancer un appel clair : maîtrise-toi, dépasse-toi, ose agir. Elle parle de courage et de ténacité, des valeurs essentielles à mes yeux.
+                            <br>Ce message a trouvé un écho : l’œuvre a reçu le prix Namosa en 2021, ce qui a été pour moi une belle reconnaissance.
+                        </div>
+                        <div class="dialogue--buttons">
+                            <button id="btn--continue6" class="btn--yes">Continuer</button>
+                        </div>
+                        <div class="dialogue--arrow6 arrow"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div id="dialogue7" class="dialogue dialogue7 hidden">
+                        <div class="dialogue--text">
+                            Je représente ici un homme accroupi, le corps tendu, courbé, entièrement mobilisé autour d’un fardeau lourd.
+                            <br>Sa posture traduit un engagement total, physique et intérieur.
+                            La sphère, lisse et sans prise, symbolise la vie et la société : complexes, pesantes, insaisissables.
+                            <br>Ce combat, c’est celui de la résilience, du dépassement de soi, de la force qu’on puise pour avancer malgré tout.
+                            <br><br>J’ai voulu évoquer aussi Atlas portant le ciel, et Sisyphe face à son rocher.
+                            <br>Des figures qui incarnent, comme mon personnage, la persistance, l’acte de tenir bon, même dans l’épreuve.
+                        </div>
+                        <div class="dialogue--buttons">
+                            <button id="btn--continue7" class="btn--yes">Continuer</button>
+                        </div>
+                        <div class="dialogue--arrow7 arrow"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div id="dialogue8" class="dialogue dialogue8 hidden">
+                        <div class="dialogue--text">
+                            À travers Atèlé, je prône clairement le dépassement de soi.
+                            <br>Le message est simple, mais essentiel :
+                            <br>ne jamais cesser de lutter. Comme Sisyphe, condamné à pousser son rocher sans fin, mon personnage incarne le combat permanent de l’existence.
+                            <br><br>Cette œuvre nous rappelle que, malgré l’absurde ou la fatigue, il faut continuer à avancer.
+                        </div>
+                        <div class="dialogue--buttons">
+                            <button id="btn--continue8" class="btn--yes">Continuer</button>
+                        </div>
+                        <div class="dialogue--arrow8 arrow"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div id="dialogue9" class="dialogue dialogue9 hidden">
+                        <div class="dialogue--text">
+                            Continuons nos explications, prochains arrêt les montagnes !
+                        </div>
+                        <div class="dialogue--arrow9 arrow"></div>
+                    </div>
+                </div>
+        </div>
+        <!-- case 4-->
+        <div class="slide bg--ciel4">
+        </div>
+        <!-- case 5-->
+        <div class="slide bg--ciel5">
+            
+            <img class="el__nuagesmall-4 paralax parallax--medium" src="./assets/img/elements/nuage--medium.png" alt="nuages medium">
+
+        </div>
+        <!-- case 6-->
+            <div class="slide bg--ciel6">
+
+                <!--Les images-->
+                    <img class=" el__moutains firstlayer paralax parallax--slow" src="./assets/img/elements/moutains--firstlayer.png" alt="moutains--firstlayer">
+
+                    <img class=" el__moutains secondlayer paralax parallax--slow" src="./assets/img/elements/moutains--secondlayer.png" alt="moutains--secondlayer">
+
+                    <img class=" el__moutains thirdlayer paralax parallax--medium" src="./assets/img/elements/moutains--thirdlayer.png" alt="moutains--thirdlayer">
+
+                    <img class=" el__moutains fourlayer paralax parallax--medium" src="./assets/img/elements/moutains--fourlayer.png" alt="moutains--fourlayer">
+
+                    <img class=" el__moutains fivelayer paralax parallax--fast" src="./assets/img/elements/moutains--fivelayer.png" alt="moutains--fivelayer">
+
+                    <img class="el__nuagesbig paralax parallax--slow" src="./assets/img/elements/nuage--large.png" alt="nuage big">
+
+                    <img class="el__nuagesmedium--4 paralax parallax--slow" src="./assets/img/elements/nuage--large.png" alt="nuage big">
+
+                    <img class="el__grass el__grass-4 paralax" src="./assets/img/elements/herbe.png" alt="herbe"> <!--Je met l'herbe de la slide 4 pour que l'herbe sois bien devant la montagne-->
+
+                    <img class="el__grass el__grass-5 paralax" src="./assets/img/elements/herbe.png" alt="herbe"> <!--Je met l'herbe de la slide 5 pour que l'herbe sois bien devant la montagne-->
+
+                    <img class="el__grass paralax" src="./assets/img/elements/herbe.png" alt="herbe">
+
+                    <img class="el__chibi-mountains paralax" src="./assets/img/elements/chibi--montagne.png" alt="chibi--montagne">
+                <!--Les dialogues-->
+
+                    <div id="dialogue10" class="dialogue dialogue10">
+                        <div class="dialogue--text">
+                            Je me suis inspiré de deux figures mythologiques fortes : <span class="dialogue--bold">Sisyphe et Atlas</span>.
+                            <br>Dans le récit de Camus, Sisyphe défie les dieux en enchaînant la Mort pour que les hommes ne meurent plus. Mais, une fois la Mort libérée, Sisyphe s’échappe des Enfers par une ruse.
+                            <br>Pour le punir, les dieux le condamnent à pousser un rocher sans fin jusqu’au sommet d’une montagne, où il retombe à chaque fois. Camus voit en lui le héros absurde, qui malgré une tâche sans sens, embrasse la vie et refuse la mort.
+                        </div>
+                        <div class="dialogue--buttons">
+                            <button id="btn--continue10" class="btn--yes">Continuer</button>
+                        </div>
+                        <div class="dialogue--arrow10 arrow"></div>
+                    </div>
+
+                    <div id="dialogue11" class="dialogue dialogue11 hidden">
+                        <div class="dialogue--text">
+                            Atlas, quant à lui, est condamné par Zeus à soutenir le ciel sur ses épaules, après la défaite des Titans lors de la Titanomachie. Il devient Atlas Télamon, « Atlas endurant », symbole de l’axe céleste et du poids éternel qu’il porte.
+                            <br>Ces mythes incarnent pour moi l’effort constant, la persévérance face à l’absurde, et le courage de porter ce qui semble insupportable.
+                            <br>Ce sont des thèmes que j’explore dans mon œuvre.
+                        </div>
+                        <div class="dialogue--buttons">
+                            <button id="btn--continue11" class="btn--yes">Continuer</button>
+                        </div>
+                        <div class="dialogue--arrow11 arrow"></div>
+                    </div>
+
+                    <div id="dialogue12" class="dialogue dialogue12 hidden">
+                        <div class="dialogue--text">
+                           Bon allez il est temps de ce rendre dans mon atelier !
+                        </div>
+                        <div class="dialogue--arrow12 arrow"></div>
+                    </div>
+            </div>
+        <!-- case 7-->
+        <div class="slide bg--ciel7">
+            
+            <img class="el__grass paralax" src="./assets/img/elements/herbe.png" alt="herbe">
+            
+        </div>
+        <!-- case 8-->
+        <div class="slide bg--ciel8">
+
+             <!--Les images-->
+                <img class="el__chibi--entrée paralax" src="./assets/img/elements/chibi--maison.png" alt="chibi entrée">
+
+            <!--Les dialogues-->
+                <div id="dialogue13" class="dialogue dialogue13 ">
+                        <div class="dialogue--text">
+                           Bienvenue dans mon atelier !
+                           <br> Vous pouvez observer mes autres oeuvres un peux partout !
+                        </div>
+                        <div class="dialogue--arrow13 arrow"></div>
+                </div>
+
+
+        </div>
+        <!-- case 9-->
+        <div class="slide bg--ciel9">
+
+             <!--Les images-->
+                <img class="el__chibi--milieu paralax" src="./assets/img/elements/chibi--montagne.png" alt="chibi milieu">
+
+            <!--Les dialogues-->
+                <div id="dialogue14" class="dialogue dialogue14">
+                        <div class="dialogue--text">
+                            <a href="https://js-del-basse-sambre.jimdofree.com">Vous pouvez retrouvez plus d'informations sur moi sur mon site internet !</a>
+                        </div>
+                        <div class="dialogue--arrow14 arrow"></div>
+                </div>
+        </div>
+        <!-- case 10-->
+        <div class="slide bg--ciel10">
+
+            <!--Les images-->
+                <img class="el__chibi--fin paralax" src="./assets/img/elements/chibi--bulle.png" alt="chibi fin" >
+            
+            <!--Les dialogues-->
+
+                <div id="dialogue15" class="dialogue dialogue15">
+                    <div class="dialogue--text">
+                        Parmi mes créations, Atèlé illustre le courage.
+                        <br>Mais mon travail explore aussi d’autres thèmes à travers des pièces comme Mendicité, Spectateurs, Amour toujours, Égalité, ainsi que des objets du quotidien transformés en œuvres, comme Poubelle de table, Pichet ou Cruche.
+                        <br><br>Chaque pièce porte une réflexion, une émotion différente, mais toujours avec la même volonté de toucher l’humain.
+                    </div>
+                    <div class="dialogue--buttons">
+                            <button id="btn--continue12" class="btn--yes">Continuer</button>
+                    </div>
+                    <div class="dialogue--arrow15 arrow"></div>
+                </div>
+
+                <div id="dialogue16" class="dialogue dialogue16 hidden">
+                    <div class="dialogue--text">
+                        Sans plus tarder passons à la dernière étape de notre voyage,
+                        <br><span class="dialogue--title">la création de mon oeuvre.</span>
+                        <br>Vous allez avoir un petit questionnaire et si vous y répondez bien, l'oeuvre ce construira !
+                    </div>
+                    <div class="dialogue--arrow16 arrow"></div>
+                </div>
+        </div>
+        <!-- case 11-->
+        <div class="slide bg--ciel11">
+            <!--Les images-->
+                <img class="el__chibi--questionnaire paralax" src="./assets/img/elements/chibi--sculpture.png" alt="Chibi qui sculpte">
+                <img class="el__chibi--end paralax hidden " src="./assets/img/elements/chibi--bulle.png" alt="Chibi de fond>">
+                <!-- img pour le questionnaire-->
+                    <div id="img--questionnaire">
+                        <img id="block--0" class="img--questionnaire active paralax" src="./assets/img/elements/block--1.png" alt="block--1">
+                        <img id="block--1" class="img--questionnaire paralax" src="./assets/img/elements/block--2.png" alt="block--2">
+                        <img id="block--2" class="img--questionnaire paralax"  src="./assets/img/elements/block--3.png" alt="block--3">
+                        <img id="block--3" class="img--questionnaire paralax"  src="./assets/img/elements/block--4.png" alt="block--4">
+                        <img id="block--4" class="img--questionnaire paralax"  src="./assets/img/elements/block--5.png" alt="block--5">
+                        <img id="block--5" class="img--questionnaire paralax"  src="./assets/img/elements/block--6.png" alt="block--6">
+                        <img id="block--6" class="img--questionnaire paralax"  src="./assets/img/elements/block--7.png" alt="block--7">
+                        <img id="block--7" class="img--questionnaire paralax"  src="./assets/img/elements/block--8.png" alt="block--8">
+                        <img id="block--8" class="img--questionnaire paralax"  src="./assets/img/elements/block--9.png" alt="block--9">
+                        <img id="block--9" class="img--questionnaire paralax"  src="./assets/img/elements/block--10.png" alt="block--10">
+                    </div>
+        </div>
+        <!-- case 12-->
+        <div class="slide bg--ciel12">
+            <!--Le questionnaire-->
+
+                <div class="questionnaire">
+                    <div id="question--container">
+                        <p id="question--text"></p>
+                        <div id="answers"></div>
+                    </div>
+                </div>
+
+                 <div id="dialogue17" class="dialogue dialogue17 ">
+                    <div class="dialogue--text">
+                        <span class="dialogue--title">Je t'explique le principe !</span>
+                        <br> Atélè pronne le dépassement de sois, je t'invite à écrire un projet que tu as envies
+                        <br> Cette espace sers d'espace "communautaire", en écrivant ton projet tu pourras voir ceux des autres et inversément !
+                    </div>
+                    <div class="dialogue--buttons">
+                            <button id="btn--continue13" class="btn--yes">Continuer</button>
+                    </div>
+                    <div class="dialogue--arrow17 arrow"></div>
+                </div>
+
+                <div id="projet" class="projet hidden">
+                    <label>Ton projet :</label>
+                    <input type="text" id="userAnswer">
+                    <div class="dialogue--buttons">
+                        <button id="validate" class="btn--yes">Continuer</button>
+                    </div>
+                    <div class="input--arrow arrow"></div>
+                </div>
+
+            <!--L'augmentation-->
+                <img  id="augmentation" class="el__chibi--augmentation paralax" src="./assets/img/elements/chibi--maison.png" alt="chibi maison">
+                <div id="zoom" class="zoom--container hidden">
+                    <img id="zoomable--image" class="zoom-click" src="./assets/img/elements/augmentation.png" alt="augmentation">
+                </div>
+        </div>
+      </div>
+</body>
+</html>
